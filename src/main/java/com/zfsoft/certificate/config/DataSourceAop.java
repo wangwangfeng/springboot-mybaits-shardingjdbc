@@ -135,4 +135,22 @@ public class DataSourceAop {
         HintManager.clear();
     }
 
+    /**
+     * db7库切入点,读写分离又shadingjdbc控制
+     */
+    @Pointcut("execution(* com.zfsoft.certificate.mapper.db7..*.*(..))")
+    public void switchDataSourceDb7() {
+    }
+
+    @Before("switchDataSourceDb7()")
+    public void doDb7Before() {
+        HintManager hintManager = HintManager.getInstance();
+        hintManager.setDatabaseShardingValue("db7");
+    }
+
+    @After("switchDataSourceDb7()")
+    public void doDb7after() {
+        HintManager.clear();
+    }
+
 }

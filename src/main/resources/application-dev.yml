@@ -2,7 +2,7 @@
 spring:
   shardingsphere:
     datasource:
-      names: db1
+      names: db1,db2,db7
       db1:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
@@ -85,6 +85,21 @@ spring:
         jdbc-url: jdbc:mysql://172.27.160.236:3306/fnt_sjzyglj?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
         username: zfwjw
         password: zfwjw123
+        hikari:
+          maximum-pool-size: 60
+          idle-timeout: 60000
+          connection-timeout: 60000
+          validation-timeout: 3000
+          max-lifetime: 60000
+          login-timeout: 5
+          minimum-idle: 10
+      db7:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 本机MySQL测试库
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/aq-elms?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: root
+        password: 123456
         hikari:
           maximum-pool-size: 60
           idle-timeout: 60000
