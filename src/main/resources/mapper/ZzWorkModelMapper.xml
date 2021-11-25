@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db1.ZzWorkModelMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.ZzWorkModel">
+        <!--@Table zzwk_model-->
+        <id column="ID" jdbcType="VARCHAR" property="id"/>
+        <result column="NAME" jdbcType="VARCHAR" property="name"/>
+        <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="APPLY_RANGE" jdbcType="VARCHAR" property="applyRange"/>
+        <result column="DESCRIPTION" jdbcType="VARCHAR" property="description"/>
+        <result column="CONTENT_CODE" jdbcType="VARCHAR" property="contentCode"/>
+        <result column="ORIGIN" jdbcType="VARCHAR" property="origin"/>
+        <result column="MODEL_ID" jdbcType="VARCHAR" property="modelId"/>
+        <result column="MODEL_CODE" jdbcType="VARCHAR" property="modelCode"/>
+        <result column="VERSION" jdbcType="DECIMAL" property="version"/>
+        <result column="USER_AREA" jdbcType="VARCHAR" property="userArea"/>
+        <result column="MODEL" jdbcType="BLOB" property="model"/>
+        <result column="STATUS" jdbcType="VARCHAR" property="status"/>
+        <result column="TYPE" jdbcType="VARCHAR" property="type"/>
+        <result column="STYLE_ID" jdbcType="VARCHAR" property="styleId"/>
+        <result column="XYPTGUID" jdbcType="VARCHAR" property="xyptguid"/>
+        <result column="XYPTBATCHGUID" jdbcType="VARCHAR" property="xyptbatchguid"/>
+        <result column="XYPT_TIME_DXP" jdbcType="TIMESTAMP" property="xyptTimeDxp"/>
+        <result column="XYPTBATCHNO" jdbcType="DECIMAL" property="xyptbatchno"/>
+        <result column="DELETE_STATE" jdbcType="VARCHAR" property="deleteState"/>
+        <result column="UPDATE_TIME" jdbcType="VARCHAR" property="updateTime"/>
+        <result column="JHSJ_ZF" jdbcType="TIMESTAMP" property="jhsjZf"/>
+        <result column="ATTA_OID" jdbcType="VARCHAR" property="attaOid"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        ID, `NAME`, CREATE_TIME, APPLY_RANGE, DESCRIPTION, CONTENT_CODE, ORIGIN, MODEL_ID,
+        MODEL_CODE, VERSION, USER_AREA, MODEL, `STATUS`, `TYPE`, STYLE_ID, XYPTGUID, XYPTBATCHGUID,
+        XYPT_TIME_DXP, XYPTBATCHNO, DELETE_STATE, UPDATE_TIME, JHSJ_ZF, ATTA_OID
+    </sql>
+    <select id="getZzWorkModelByContentCode" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+            m.*
+        from zzwk_model m
+        where m.DELETE_STATE = '0'
+            AND m.TYPE = '1'
+            AND m.ID IN
+            (SELECT r.MODEL_ID FROM zzwk_content c
+            LEFT JOIN zzwk_catalog_model_relation r
+            ON c.ID = r.CONTENT_ID
+            WHERE r.DELETE_STATE = '0'
+            AND c.DELETE_STATE = '0'
+            AND c.CODE = #{contentCode})
+    </select>
+</mapper>

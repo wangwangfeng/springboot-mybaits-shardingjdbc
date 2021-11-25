@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db3.OdsHzJlxxxbZhzwMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.OdsHzJlxxxbZhzw">
+        <!--@Table ods_hz_jlxxxb_zhzw-->
+        <id column="dm0000" jdbcType="VARCHAR" property="dm0000"/>
+        <result column="mc0000" jdbcType="VARCHAR" property="mc0000"/>
+        <result column="zt0000" jdbcType="VARCHAR" property="zt0000"/>
+        <result column="px0000" jdbcType="DECIMAL" property="px0000"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        dm0000, mc0000, zt0000, px0000
+    </sql>
+</mapper>

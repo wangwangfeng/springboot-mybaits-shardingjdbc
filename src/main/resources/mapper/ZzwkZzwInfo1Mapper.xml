@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db6.ZzwkZzwInfo1Mapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.ZzwkZzwInfo1">
+        <!--@Table zzwk_zzw_info_1-->
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="info_owner_name" jdbcType="VARCHAR" property="infoOwnerName"/>
+        <result column="info_owner_id" jdbcType="VARCHAR" property="infoOwnerId"/>
+        <result column="style_name" jdbcType="VARCHAR" property="styleName"/>
+        <result column="flag" jdbcType="VARCHAR" property="flag"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, info_owner_name, info_owner_id, style_name, flag
+    </sql>
+</mapper>

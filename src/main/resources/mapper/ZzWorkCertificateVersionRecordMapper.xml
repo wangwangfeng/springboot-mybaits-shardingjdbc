@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db1.ZzWorkCertificateVersionRecordMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.ZzWorkCertificateVersionRecord">
+        <!--@Table zzwk_certificate_version_record-->
+        <id column="ID" jdbcType="VARCHAR" property="id"/>
+        <result column="CERTIFICATE_ID" jdbcType="VARCHAR" property="certificateId"/>
+        <result column="CERTIFICATE_CODE" jdbcType="VARCHAR" property="certificateCode"/>
+        <result column="CONTENT_CODE" jdbcType="VARCHAR" property="contentCode"/>
+        <result column="OWNER_ID" jdbcType="VARCHAR" property="ownerId"/>
+        <result column="OWNER_NAME" jdbcType="VARCHAR" property="ownerName"/>
+        <result column="INFO_CODE" jdbcType="VARCHAR" property="infoCode"/>
+        <result column="MAINTENANCE_TYPE" jdbcType="VARCHAR" property="maintenanceType"/>
+        <result column="MAINTENANCE_REASON" jdbcType="VARCHAR" property="maintenanceReason"/>
+        <result column="VERSION" jdbcType="VARCHAR" property="version"/>
+        <result column="MAINTENANCE_USER_NAME" jdbcType="VARCHAR" property="maintenanceUserName"/>
+        <result column="MAINTENANCE_USER_CODE" jdbcType="VARCHAR" property="maintenanceUserCode"/>
+        <result column="MAINTENANCE_IDCARD" jdbcType="VARCHAR" property="maintenanceIdcard"/>
+        <result column="MAINTENANCE_ORG_CODE" jdbcType="VARCHAR" property="maintenanceOrgCode"/>
+        <result column="MAINTENANCE_ORG_NAME" jdbcType="VARCHAR" property="maintenanceOrgName"/>
+        <result column="MAINTENANCE_BIZCODE" jdbcType="VARCHAR" property="maintenanceBizcode"/>
+        <result column="MAINTENANCE_BIZNAME" jdbcType="VARCHAR" property="maintenanceBizname"/>
+        <result column="CREATE_DATE" jdbcType="TIMESTAMP" property="createDate"/>
+        <result column="ATTA_OID" jdbcType="VARCHAR" property="attaOid"/>
+        <result column="STYLE_ID" jdbcType="VARCHAR" property="styleId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        ID, CERTIFICATE_ID, CERTIFICATE_CODE, CONTENT_CODE, OWNER_ID, OWNER_NAME, INFO_CODE,
+        MAINTENANCE_TYPE, MAINTENANCE_REASON, VERSION, MAINTENANCE_USER_NAME, MAINTENANCE_USER_CODE,
+        MAINTENANCE_IDCARD, MAINTENANCE_ORG_CODE, MAINTENANCE_ORG_NAME, MAINTENANCE_BIZCODE,
+        MAINTENANCE_BIZNAME, CREATE_DATE, ATTA_OID, STYLE_ID
+    </sql>
+</mapper>

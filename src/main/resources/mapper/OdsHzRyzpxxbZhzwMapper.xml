@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db3.OdsHzRyzpxxbZhzwMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.OdsHzRyzpxxbZhzw">
+        <!--@Table ods_hz_ryzpxxb_zhzw-->
+        <id column="zpid" jdbcType="DECIMAL" property="zpid"/>
+        <result column="ryid" jdbcType="DECIMAL" property="ryid"/>
+        <result column="gmsfhm" jdbcType="VARCHAR" property="gmsfhm"/>
+        <result column="xm" jdbcType="VARCHAR" property="xm"/>
+        <result column="zp" jdbcType="BLOB" property="zp"/>
+        <result column="lrrq" jdbcType="VARCHAR" property="lrrq"/>
+        <result column="zhgxsj" jdbcType="TIMESTAMP" property="zhgxsj"/>
+        <result column="xypt_time_dxp" jdbcType="TIMESTAMP" property="xyptTimeDxp"/>
+        <result column="change_flag" jdbcType="VARCHAR" property="changeFlag"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        zpid, ryid, gmsfhm, xm, zp, lrrq, zhgxsj, xypt_time_dxp, change_flag
+    </sql>
+</mapper>

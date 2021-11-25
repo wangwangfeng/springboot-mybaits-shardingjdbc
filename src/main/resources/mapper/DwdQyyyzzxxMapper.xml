@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db4.DwdQyyyzzxxMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.DwdQyyyzzxx">
+        <!--@Table dwd_qyyyzzxx-->
+        <result column="zch" jdbcType="VARCHAR" property="zch"/>
+        <result column="mc" jdbcType="VARCHAR" property="mc"/>
+        <result column="lx" jdbcType="VARCHAR" property="lx"/>
+        <result column="zs" jdbcType="VARCHAR" property="zs"/>
+        <result column="fddbr" jdbcType="VARCHAR" property="fddbr"/>
+        <result column="zczb" jdbcType="VARCHAR" property="zczb"/>
+        <result column="clrq" jdbcType="VARCHAR" property="clrq"/>
+        <result column="yyqx" jdbcType="VARCHAR" property="yyqx"/>
+        <result column="jyfw" jdbcType="VARCHAR" property="jyfw"/>
+        <result column="djjg" jdbcType="VARCHAR" property="djjg"/>
+        <result column="djn" jdbcType="VARCHAR" property="djn"/>
+        <result column="djy" jdbcType="VARCHAR" property="djy"/>
+        <result column="djr" jdbcType="VARCHAR" property="djr"/>
+        <result column="rwm" jdbcType="VARCHAR" property="rwm"/>
+        <result column="zsbh" jdbcType="VARCHAR" property="zsbh"/>
+        <result column="jycs" jdbcType="VARCHAR" property="jycs"/>
+        <result column="fzr" jdbcType="VARCHAR" property="fzr"/>
+        <result column="hhqx" jdbcType="VARCHAR" property="hhqx"/>
+        <result column="zyswhhr" jdbcType="VARCHAR" property="zyswhhr"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        zch, mc, lx, zs, fddbr, zczb, clrq, yyqx, jyfw, djjg, djn, djy, djr, rwm, zsbh, jycs,
+        fzr, hhqx, zyswhhr
+    </sql>
+</mapper>

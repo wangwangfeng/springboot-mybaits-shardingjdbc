@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db3.OdsJjXszzmxxZhzwMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.OdsJjXszzmxxZhzw">
+        <!--@Table ods_jj_xszzmxx_zhzw-->
+        <id column="xh" jdbcType="VARCHAR" property="xh"/>
+        <result column="photo" jdbcType="BLOB" property="photo"/>
+        <result column="infocode" jdbcType="VARCHAR" property="infocode"/>
+        <result column="cartype" jdbcType="CHAR" property="cartype"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="useproperty" jdbcType="CHAR" property="useproperty"/>
+        <result column="brandmodel" jdbcType="VARCHAR" property="brandmodel"/>
+        <result column="carcode" jdbcType="VARCHAR" property="carcode"/>
+        <result column="enginenumber" jdbcType="VARCHAR" property="enginenumber"/>
+        <result column="registdate" jdbcType="TIMESTAMP" property="registdate"/>
+        <result column="issuedate" jdbcType="TIMESTAMP" property="issuedate"/>
+        <result column="carnumber" jdbcType="VARCHAR" property="carnumber"/>
+        <result column="archivesnum" jdbcType="VARCHAR" property="archivesnum"/>
+        <result column="approvedload" jdbcType="DECIMAL" property="approvedload"/>
+        <result column="totalmass" jdbcType="DECIMAL" property="totalmass"/>
+        <result column="kerbmass" jdbcType="DECIMAL" property="kerbmass"/>
+        <result column="approvedquality" jdbcType="DECIMAL" property="approvedquality"/>
+        <result column="overallsize" jdbcType="VARCHAR" property="overallsize"/>
+        <result column="total" jdbcType="DECIMAL" property="total"/>
+        <result column="note1" jdbcType="VARCHAR" property="note1"/>
+        <result column="recode" jdbcType="VARCHAR" property="recode"/>
+        <result column="notes2" jdbcType="VARCHAR" property="notes2"/>
+        <result column="rlzl" jdbcType="VARCHAR" property="rlzl"/>
+        <result column="barcode" jdbcType="VARCHAR" property="barcode"/>
+        <result column="barnumber" jdbcType="VARCHAR" property="barnumber"/>
+        <result column="zhgxsj" jdbcType="TIMESTAMP" property="zhgxsj"/>
+        <result column="content" jdbcType="CHAR" property="content"/>
+        <result column="ownerid" jdbcType="VARCHAR" property="ownerid"/>
+        <result column="ownername" jdbcType="VARCHAR" property="ownername"/>
+        <result column="infovaliditybegin" jdbcType="TIMESTAMP" property="infovaliditybegin"/>
+        <result column="infovalidityend" jdbcType="TIMESTAMP" property="infovalidityend"/>
+        <result column="orgcode" jdbcType="VARCHAR" property="orgcode"/>
+        <result column="createdate" jdbcType="TIMESTAMP" property="createdate"/>
+        <result column="modifydate" jdbcType="TIMESTAMP" property="modifydate"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        xh, photo, infocode, cartype, `name`, address, useproperty, brandmodel, carcode,
+        enginenumber, registdate, issuedate, carnumber, archivesnum, approvedload, totalmass,
+        kerbmass, approvedquality, overallsize, total, note1, recode, notes2, rlzl, barcode,
+        barnumber, zhgxsj, content, ownerid, ownername, infovaliditybegin, infovalidityend,
+        orgcode, createdate, modifydate
+    </sql>
+</mapper>

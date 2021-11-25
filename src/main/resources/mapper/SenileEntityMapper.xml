@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db2.SenileEntityMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.SenileEntity">
+        <!--@Table senile-->
+        <id column="bh" jdbcType="INTEGER" property="bh"/>
+        <result column="xm" jdbcType="VARCHAR" property="xm"/>
+        <result column="xb" jdbcType="VARCHAR" property="xb"/>
+        <result column="mz" jdbcType="VARCHAR" property="mz"/>
+        <result column="sfzh" jdbcType="VARCHAR" property="sfzh"/>
+        <result column="csrq" jdbcType="VARCHAR" property="csrq"/>
+        <result column="jzdz" jdbcType="VARCHAR" property="jzdz"/>
+        <result column="fzjg" jdbcType="VARCHAR" property="fzjg"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="flag" jdbcType="VARCHAR" property="flag"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        bh, xm, xb, mz, sfzh, csrq, jzdz, fzjg, type, flag
+    </sql>
+
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db3.OdsHzCzrkjbxxbZhzwMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.OdsHzCzrkjbxxbZhzw">
+        <!--@Table ods_hz_czrkjbxxb_zhzw-->
+        <id column="rynbid" jdbcType="DECIMAL" property="rynbid"/>
+        <result column="zpid" jdbcType="DECIMAL" property="zpid"/>
+        <result column="gmsfhm" jdbcType="VARCHAR" property="gmsfhm"/>
+        <result column="qfjg" jdbcType="VARCHAR" property="qfjg"/>
+        <result column="yxqxqsrq" jdbcType="VARCHAR" property="yxqxqsrq"/>
+        <result column="yxqxjzrq" jdbcType="VARCHAR" property="yxqxjzrq"/>
+        <result column="xm" jdbcType="VARCHAR" property="xm"/>
+        <result column="xb" jdbcType="VARCHAR" property="xb"/>
+        <result column="mz" jdbcType="VARCHAR" property="mz"/>
+        <result column="jlx" jdbcType="VARCHAR" property="jlx"/>
+        <result column="mlph" jdbcType="VARCHAR" property="mlph"/>
+        <result column="mlxz" jdbcType="VARCHAR" property="mlxz"/>
+        <result column="ssxq" jdbcType="VARCHAR" property="ssxq"/>
+        <result column="zhgxsj" jdbcType="TIMESTAMP" property="zhgxsj"/>
+        <result column="ryzt" jdbcType="VARCHAR" property="ryzt"/>
+        <result column="jlbz" jdbcType="VARCHAR" property="jlbz"/>
+        <result column="cxbz" jdbcType="VARCHAR" property="cxbz"/>
+    </resultMap>
+</mapper>

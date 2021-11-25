@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db1.ZzWorkCertificateMapper">
+
+    <select id="getZzWorkCertificateByContentCode" resultType="com.zfsoft.certificate.pojo.ZzWorkCertificate">
+        SELECT * FROM zzwk_certificate WHERE CONTENT_CODE = #{contentCode} AND DELETE_STATE = '0' AND CER_STATUS IN ('0','9') ORDER BY CREATE_DATE ASC
+    </select>
+
+    <update id="updateCerStatusById">
+        UPDATE zzwk_certificate SET CER_STATUS = #{cerStatus} WHERE ID = #{id}
+    </update>
+
+    <select id="getZzWorkCertificateMaintenanceByContentCode" resultType="com.zfsoft.certificate.pojo.ZzWorkCertificate">
+        SELECT * FROM zzwk_certificate WHERE CONTENT_CODE = #{contentCode} AND DELETE_STATE = '1' AND CER_STATUS = '4' ORDER BY CREATE_DATE ASC
+    </select>
+
+    <select id="findByContentCodeAndInfo" resultType="com.zfsoft.certificate.pojo.ZzWorkCertificate">
+        SELECT * FROM zzwk_certificate WHERE CONTENT_CODE = #{contentCode} AND INFO_CODE = #{infoCode} AND OWNER_ID = #{ownerId} AND DELETE_STATE = '0' AND CER_STATUS != '4' ORDER BY CREATE_DATE DESC
+    </select>
+
+</mapper>

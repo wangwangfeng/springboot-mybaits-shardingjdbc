@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db1.ZzWorkBusinessMetadataMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.ZzWorkBusinessMetadata">
+        <!--@Table zzwk_business_metadata-->
+        <id column="ID" jdbcType="VARCHAR" property="id"/>
+        <result column="METADATA" jdbcType="VARCHAR" property="metadata"/>
+        <result column="CONTROL_TYPE" jdbcType="VARCHAR" property="controlType"/>
+        <result column="TYPE" jdbcType="VARCHAR" property="type"/>
+        <result column="LENGTH" jdbcType="DECIMAL" property="length"/>
+        <result column="IS_REQUIRE" jdbcType="VARCHAR" property="isRequire"/>
+        <result column="NAME" jdbcType="VARCHAR" property="name"/>
+        <result column="DESCRIPTION" jdbcType="VARCHAR" property="description"/>
+        <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="CONTENT_CODE" jdbcType="VARCHAR" property="contentCode"/>
+        <result column="VERSION" jdbcType="DECIMAL" property="version"/>
+        <result column="RELATION" jdbcType="VARCHAR" property="relation"/>
+        <result column="DEFAULT_VALUE" jdbcType="VARCHAR" property="defaultValue"/>
+        <result column="STYLE_ID" jdbcType="VARCHAR" property="styleId"/>
+        <result column="RELATION_QUERY" jdbcType="VARCHAR" property="relationQuery"/>
+        <result column="XYPTGUID" jdbcType="VARCHAR" property="xyptguid"/>
+        <result column="XYPTBATCHGUID" jdbcType="VARCHAR" property="xyptbatchguid"/>
+        <result column="XYPT_TIME_DXP" jdbcType="TIMESTAMP" property="xyptTimeDxp"/>
+        <result column="XYPTBATCHNO" jdbcType="DECIMAL" property="xyptbatchno"/>
+        <result column="DELETE_STATE" jdbcType="VARCHAR" property="deleteState"/>
+        <result column="UPDATE_TIME" jdbcType="VARCHAR" property="updateTime"/>
+        <result column="JHSJ_ZF" jdbcType="TIMESTAMP" property="jhsjZf"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        ID, METADATA, CONTROL_TYPE, `TYPE`, `LENGTH`, IS_REQUIRE, `NAME`, DESCRIPTION, CREATE_TIME,
+        CONTENT_CODE, VERSION, RELATION, DEFAULT_VALUE, STYLE_ID, RELATION_QUERY, XYPTGUID,
+        XYPTBATCHGUID, XYPT_TIME_DXP, XYPTBATCHNO, DELETE_STATE, UPDATE_TIME, JHSJ_ZF
+    </sql>
+    <select id="getZzWorkBusinessMetadataByStyleId" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <!--@mbg.generated-->
+        select
+            <include refid="Base_Column_List"/>
+        from zzwk_business_metadata
+        where STYLE_ID = #{styleId} and DELETE_STATE = '0'
+    </select>
+
+</mapper>

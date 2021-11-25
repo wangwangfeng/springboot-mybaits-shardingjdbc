@@ -1,0 +1,106 @@
+# sharding-jdbc分库分表的配置
+spring:
+  shardingsphere:
+    datasource:
+      names: db1
+      db1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 一期电子证照测试库
+        jdbc-url: jdbc:mysql://59.203.218.244:3307/aq_elms_old_20201211?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: root
+        password: Aqtest@123
+        hikari:
+          maximum-pool-size: 60
+          idle-timeout: 60000
+          connection-timeout: 60000
+          validation-timeout: 3000
+          max-lifetime: 60000
+          login-timeout: 5
+          minimum-idle: 10
+      db2:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 一期电子证照测试库
+        jdbc-url: jdbc:mysql://59.203.218.244:3307/kettle_t_yu?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: root
+        password: Aqtest@123
+        hikari:
+          maximum-pool-size: 60
+          idle-timeout: 60000
+          connection-timeout: 60000
+          validation-timeout: 3000
+          max-lifetime: 60000
+          login-timeout: 5
+          minimum-idle: 10
+      db3:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 数梦公安库
+        jdbc-url: jdbc:mysql://172.27.189.45:3306/fnt_gaj?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: zf_query
+        password: D6e511!5
+        hikari:
+          maximum-pool-size: 60
+          idle-timeout: 60000
+          connection-timeout: 60000
+          validation-timeout: 3000
+          max-lifetime: 60000
+          login-timeout: 5
+          minimum-idle: 10
+      db4:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 数梦卫健委库
+        jdbc-url: jdbc:mysql://172.27.189.47:3306/fnt_wjw?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: zf_query
+        password: D6e511!5
+        hikari:
+          maximum-pool-size: 60
+          idle-timeout: 60000
+          connection-timeout: 60000
+          validation-timeout: 3000
+          max-lifetime: 60000
+          login-timeout: 5
+          minimum-idle: 10
+      db5:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 数梦教育体育局库
+        jdbc-url: jdbc:mysql://172.27.189.54:3306/fnt_jytyj?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: zf_query
+        password: D6e511!5
+        hikari:
+          maximum-pool-size: 60
+          idle-timeout: 60000
+          connection-timeout: 60000
+          validation-timeout: 3000
+          max-lifetime: 60000
+          login-timeout: 5
+          minimum-idle: 10
+      db6:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # 历史数梦卫健委库(处理讯飞身份证)
+        jdbc-url: jdbc:mysql://172.27.160.236:3306/fnt_sjzyglj?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: zfwjw
+        password: zfwjw123
+        hikari:
+          maximum-pool-size: 60
+          idle-timeout: 60000
+          connection-timeout: 60000
+          validation-timeout: 3000
+          max-lifetime: 60000
+          login-timeout: 5
+          minimum-idle: 10
+    #是否开启SQL显示，默认值: false
+    props:
+      sql:
+        show: false
+    sharding:
+      #未配置分片规则的表将通过默认数据源定位
+      default-data-source-name: db1
+      #默认数据库分片策略，同分库策略
+      default-database-strategy:
+        hint:
+          algorithm-class-name: com.zfsoft.certificate.config.MyDatasourceRoutingAlgorithm

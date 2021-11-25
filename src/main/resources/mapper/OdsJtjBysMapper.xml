@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db5.OdsJtjBysMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.OdsJtjBys">
+        <!--@Table ods_jtj_bys-->
+        <result column="bysbh" jdbcType="VARCHAR" property="bysbh"/>
+        <result column="xm" jdbcType="VARCHAR" property="xm"/>
+        <result column="sfzh" jdbcType="VARCHAR" property="sfzh"/>
+        <result column="xb" jdbcType="VARCHAR" property="xb"/>
+        <result column="rxn" jdbcType="VARCHAR" property="rxn"/>
+        <result column="rxy" jdbcType="VARCHAR" property="rxy"/>
+        <result column="byn" jdbcType="VARCHAR" property="byn"/>
+        <result column="byy" jdbcType="VARCHAR" property="byy"/>
+        <result column="xx" jdbcType="VARCHAR" property="xx"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        bysbh, xm, sfzh, xb, rxn, rxy, byn, byy, xx
+    </sql>
+</mapper>

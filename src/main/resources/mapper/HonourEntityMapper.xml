@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db4.HonourEntityMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.HonourEntity">
+        <!--@Table dszngrz_zz-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="grzh" jdbcType="VARCHAR" property="grzh"/>
+        <result column="czr" jdbcType="VARCHAR" property="czr"/>
+        <result column="fzdw" jdbcType="VARCHAR" property="fzdw"/>
+        <result column="fzrq" jdbcType="VARCHAR" property="fzrq"/>
+        <result column="xm" jdbcType="VARCHAR" property="xm"/>
+        <result column="xb" jdbcType="VARCHAR" property="xb"/>
+        <result column="csrq" jdbcType="VARCHAR" property="csrq"/>
+        <result column="sfz" jdbcType="VARCHAR" property="sfz"/>
+        <result column="FWCS" jdbcType="VARCHAR" property="fwcs"/>
+        <result column="poxm" jdbcType="VARCHAR" property="poxm"/>
+        <result column="pocsrq" jdbcType="VARCHAR" property="pocsrq"/>
+        <result column="mz" jdbcType="VARCHAR" property="mz"/>
+        <result column="posfz" jdbcType="VARCHAR" property="posfz"/>
+        <result column="FWCS1" jdbcType="VARCHAR" property="fwcs1"/>
+        <result column="xm1" jdbcType="VARCHAR" property="xm1"/>
+        <result column="xb1" jdbcType="VARCHAR" property="xb1"/>
+        <result column="csrq1" jdbcType="VARCHAR" property="csrq1"/>
+        <result column="xjd" jdbcType="VARCHAR" property="xjd"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, grzh, czr, fzdw, fzrq, xm, xb, csrq, sfz, FWCS, poxm, pocsrq, mz, posfz, FWCS1, xm1, xb1, csrq1, xjd
+    </sql>
+    <select id="findAll" resultMap="BaseResultMap">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM
+            dszngrz_zz
+        WHERE
+            grzh IS NOT NULL
+            AND grzh != ''
+            AND xm1 IS NOT NULL
+            AND xm1 != ''
+            AND czr IS NOT NULL
+            AND czr != ''
+            AND xm IS NOT NULL
+            AND xm != ''
+            AND FWCS IS NOT NULL
+            AND FWCS != ''
+            AND sfz IS NOT NULL
+            AND sfz != ''
+            AND czr = xm
+            AND xb = '2'
+        ORDER BY
+            id
+        ASC
+    </select>
+    <select id="findAllPoXm" resultMap="BaseResultMap">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM
+            dszngrz_zz
+        WHERE
+            grzh IS NOT NULL
+            AND grzh != ''
+            AND xm1 IS NOT NULL
+            AND xm1 != ''
+            AND czr IS NOT NULL
+            AND czr != ''
+            AND xm IS NOT NULL
+            AND xm != ''
+            AND FWCS IS NOT NULL
+            AND FWCS != ''
+            AND posfz IS NOT NULL
+            AND posfz != ''
+            AND czr = poxm
+            AND xb = '2'
+        ORDER BY
+            id
+        ASC
+    </select>
+        <select id="findAllPoXmMan" resultMap="BaseResultMap">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM
+            dszngrz_zz
+        WHERE
+            grzh IS NOT NULL
+            AND grzh != ''
+            AND xm1 IS NOT NULL
+            AND xm1 != ''
+            AND czr IS NOT NULL
+            AND czr != ''
+            AND xm IS NOT NULL
+            AND xm != ''
+            AND FWCS1 IS NOT NULL
+            AND FWCS1 != ''
+            AND posfz IS NOT NULL
+            AND posfz != ''
+            AND czr = poxm
+            AND xb = '1'
+        ORDER BY
+            id
+        ASC
+    </select>
+</mapper>

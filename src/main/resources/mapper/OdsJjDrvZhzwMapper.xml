@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db3.OdsJjDrvZhzwMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.OdsJjDrvZhzw">
+        <!--@Table ods_jj_drv_zhzw-->
+        <id column="dabh" jdbcType="CHAR" property="dabh"/>
+        <result column="infocode" jdbcType="VARCHAR" property="infocode"/>
+        <result column="name1" jdbcType="VARCHAR" property="name1"/>
+        <result column="sex" jdbcType="CHAR" property="sex"/>
+        <result column="country" jdbcType="CHAR" property="country"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="firstday" jdbcType="VARCHAR" property="firstday"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="photo" jdbcType="BLOB" property="photo"/>
+        <result column="jl1" jdbcType="VARCHAR" property="jl1"/>
+        <result column="jl2" jdbcType="VARCHAR" property="jl2"/>
+        <result column="barcode" jdbcType="VARCHAR" property="barcode"/>
+        <result column="barnumber" jdbcType="VARCHAR" property="barnumber"/>
+        <result column="infovaliditybegin" jdbcType="TIMESTAMP" property="infovaliditybegin"/>
+        <result column="infovalidityend" jdbcType="TIMESTAMP" property="infovalidityend"/>
+        <result column="modifydate" jdbcType="TIMESTAMP" property="modifydate"/>
+    </resultMap>
+</mapper>

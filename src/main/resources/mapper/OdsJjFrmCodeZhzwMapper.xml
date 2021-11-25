@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db3.OdsJjFrmCodeZhzwMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.OdsJjFrmCodeZhzw">
+        <!--@Table ods_jj_frm_code_zhzw-->
+        <result column="xtlb" jdbcType="LONGVARCHAR" property="xtlb"/>
+        <result column="dmlb" jdbcType="VARCHAR" property="dmlb"/>
+        <result column="dmz" jdbcType="VARCHAR" property="dmz"/>
+        <result column="dmsm1" jdbcType="LONGVARCHAR" property="dmsm1"/>
+        <result column="dmsm2" jdbcType="LONGVARCHAR" property="dmsm2"/>
+        <result column="dmsm3" jdbcType="LONGVARCHAR" property="dmsm3"/>
+        <result column="dmsm4" jdbcType="LONGVARCHAR" property="dmsm4"/>
+        <result column="dmsx" jdbcType="CHAR" property="dmsx"/>
+        <result column="sxh" jdbcType="DECIMAL" property="sxh"/>
+        <result column="ywdx" jdbcType="VARCHAR" property="ywdx"/>
+        <result column="zt" jdbcType="CHAR" property="zt"/>
+        <result column="csbj" jdbcType="CHAR" property="csbj"/>
+        <result column="gxsj" jdbcType="DATE" property="gxsj"/>
+        <result column="xypt_time_dxp" jdbcType="TIMESTAMP" property="xyptTimeDxp"/>
+        <result column="change_flag" jdbcType="VARCHAR" property="changeFlag"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        xtlb, dmlb, dmz, dmsm1, dmsm2, dmsm3, dmsm4, dmsx, sxh, ywdx, zt, csbj, gxsj, xypt_time_dxp,
+        change_flag
+    </sql>
+</mapper>

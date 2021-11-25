@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db3.MzzdbMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.Mzzdb">
+        <!--@Table mzzdb-->
+        <result column="xh" jdbcType="VARCHAR" property="xh"/>
+        <result column="mc" jdbcType="VARCHAR" property="mc"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        xh, mc
+    </sql>
+</mapper>

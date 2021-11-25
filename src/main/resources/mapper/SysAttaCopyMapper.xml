@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfsoft.certificate.mapper.db1.SysAttaCopyMapper">
+    <resultMap id="BaseResultMap" type="com.zfsoft.certificate.pojo.SysAttaCopy">
+        <!--@Table t_sys_atta_copy-->
+        <id column="OID" jdbcType="VARCHAR" property="oid"/>
+        <result column="NAME" jdbcType="VARCHAR" property="name"/>
+        <result column="ORIGIN_NAME" jdbcType="VARCHAR" property="originName"/>
+        <result column="FILE_PATH" jdbcType="VARCHAR" property="filePath"/>
+        <result column="EXTENSION_NAME" jdbcType="VARCHAR" property="extensionName"/>
+        <result column="UPLOAD_DATE" jdbcType="TIMESTAMP" property="uploadDate"/>
+        <result column="USER_OID" jdbcType="VARCHAR" property="userOid"/>
+        <result column="IS_DELETE" jdbcType="VARCHAR" property="isDelete"/>
+        <result column="SYNC_STATUS" jdbcType="VARCHAR" property="syncStatus"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        OID, `NAME`, ORIGIN_NAME, FILE_PATH, EXTENSION_NAME, UPLOAD_DATE, USER_OID, IS_DELETE,
+        SYNC_STATUS
+    </sql>
+
+</mapper>
