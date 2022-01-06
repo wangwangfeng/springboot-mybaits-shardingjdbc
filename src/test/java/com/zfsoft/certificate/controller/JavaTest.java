@@ -471,7 +471,7 @@ public class JavaTest {
         System.out.println("员工按性别、地区：" + group2);
 
         // 接合(joining)
-        String names = personList.stream().map(p -> p.getName()).collect(Collectors.joining(","));
+        String names = personList.stream().map(Person::getName).collect(Collectors.joining(","));
         System.out.println("所有员工的姓名：" + names);
         List<String> list6 = Arrays.asList("A", "B", "C");
         String string = list6.stream().collect(Collectors.joining("-"));

@@ -2,7 +2,7 @@
 spring:
   shardingsphere:
     datasource:
-      names: db1,db2,db7
+      names: db1,db2
       db1:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver

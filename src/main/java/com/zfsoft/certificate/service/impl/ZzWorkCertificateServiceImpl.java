@@ -379,7 +379,7 @@ public class ZzWorkCertificateServiceImpl extends ServiceImpl<ZzWorkCertificateM
             resultMap.put("flag", "true");
             // 盖章成功or失败
             resultMap.put("sealFlag", sealFlag);
-            try {
+/*            try {
                 // 索引上报省里
                 IflytekUtils iflytekUtils = new IflytekUtils();
                 ApiResponse apu = iflytekUtils.key_WEIHU(jsonStr.getBytes(StandardCharsets.UTF_8.name()));
@@ -393,7 +393,7 @@ public class ZzWorkCertificateServiceImpl extends ServiceImpl<ZzWorkCertificateM
                 }
             } catch (Exception e) {
                 System.out.println("+++++上报省里接口异常++++++");
-            }
+            }*/
         } else {
             resultMap.put("result", "错误:制证返回附件错误！");
             return resultMap;

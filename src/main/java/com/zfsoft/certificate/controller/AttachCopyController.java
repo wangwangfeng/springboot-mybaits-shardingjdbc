@@ -66,10 +66,10 @@ public class AttachCopyController {
     private SysAttaCopyMapper sysAttaCopyMapper;
 
     @Autowired
-    private ZzwkCertificateLogsMapper zzwkCertificateLogsMapper;
+    private ZzWorkCertificateLogsMapper zzWorkCertificateLogsMapper;
 
     @Autowired
-    private ZzwkCertificateVersionRecordMapper zzwkCertificateVersionRecordMapper;
+    private ZzWorkCertificateVersionRecordMapper zzWorkCertificateVersionRecordMapper;
 
     @Autowired
     private HistoryMapper historyMapper;
@@ -196,11 +196,11 @@ public class AttachCopyController {
                                     // 删除证照表数据
                                     //zzWorkCertificateMapper.deleteById(entity.getId());
                                     // 删除日志表数据
-                                    LambdaQueryWrapper<ZzwkCertificateLogs> deleteLogs = new LambdaQueryWrapper<ZzwkCertificateLogs>().eq(ZzwkCertificateLogs::getAttaOid, entity.getAttaOid());
-                                    zzwkCertificateLogsMapper.delete(deleteLogs);
+                                    LambdaQueryWrapper<ZzWorkCertificateLogs> deleteLogs = new LambdaQueryWrapper<ZzWorkCertificateLogs>().eq(ZzWorkCertificateLogs::getAttaOid, entity.getAttaOid());
+                                    zzWorkCertificateLogsMapper.delete(deleteLogs);
                                     // 删除维护记录表数据
-                                    LambdaQueryWrapper<ZzwkCertificateVersionRecord> deleteVersion = new LambdaQueryWrapper<ZzwkCertificateVersionRecord>().eq(ZzwkCertificateVersionRecord::getAttaOid, entity.getAttaOid());
-                                    zzwkCertificateVersionRecordMapper.delete(deleteVersion);
+                                    LambdaQueryWrapper<ZzWorkCertificateVersionRecord> deleteVersion = new LambdaQueryWrapper<ZzWorkCertificateVersionRecord>().eq(ZzWorkCertificateVersionRecord::getAttaOid, entity.getAttaOid());
+                                    zzWorkCertificateVersionRecordMapper.delete(deleteVersion);
                                     // 删除附件表数据
                                     //sysAttaMapper.deleteById(entity.getAttaOid());
 
@@ -258,11 +258,11 @@ public class AttachCopyController {
                         executor.execute(() -> {
                             try {
                                 // 删除日志表数据
-                                LambdaQueryWrapper<ZzwkCertificateLogs> zzwkCertificateLogsLambdaQueryWrapper = new LambdaQueryWrapper<ZzwkCertificateLogs>().eq(ZzwkCertificateLogs::getAttaOid, entity.getCode());
-                                zzwkCertificateLogsMapper.delete(zzwkCertificateLogsLambdaQueryWrapper);
+                                LambdaQueryWrapper<ZzWorkCertificateLogs> zzwkCertificateLogsLambdaQueryWrapper = new LambdaQueryWrapper<ZzWorkCertificateLogs>().eq(ZzWorkCertificateLogs::getAttaOid, entity.getCode());
+                                zzWorkCertificateLogsMapper.delete(zzwkCertificateLogsLambdaQueryWrapper);
                                 // 删除维护记录表数据
-                                LambdaQueryWrapper<ZzwkCertificateVersionRecord> zzwkCertificateVersionRecordLambdaQueryWrapper = new LambdaQueryWrapper<ZzwkCertificateVersionRecord>().eq(ZzwkCertificateVersionRecord::getAttaOid, entity.getCode());
-                                zzwkCertificateVersionRecordMapper.delete(zzwkCertificateVersionRecordLambdaQueryWrapper);
+                                LambdaQueryWrapper<ZzWorkCertificateVersionRecord> zzwkCertificateVersionRecordLambdaQueryWrapper = new LambdaQueryWrapper<ZzWorkCertificateVersionRecord>().eq(ZzWorkCertificateVersionRecord::getAttaOid, entity.getCode());
+                                zzWorkCertificateVersionRecordMapper.delete(zzwkCertificateVersionRecordLambdaQueryWrapper);
                                 // 删除附件表数据
                                 sysAttaMapper.deleteById(entity.getCode());
 
